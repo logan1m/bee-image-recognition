@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Bee Image Recognition</title>
+        <link rel="icon" type="image/x-icon" href="https://www.rspb.org.uk/globalassets/images/birds-and-wildlife/non-bird-species-illustrations/bumblebee_1200x675.jpg" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../static/style.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <div class="text-center">
+                        <h1 class="mx-auto my-0 text-uppercase">Bee Results</h1>
+                        <!--Uploaded Image with model detection-->
+                        <img class="img-fluid mb-3 mb-lg-0" img src="{{ url_for('detected_files', filename=filename)}}">
+                        <!--img src="{{ url_for('static', filename='images/02.jpg')}}"-->
+                    </div>
+                </div>
+            </div>
+        </header>
+    </body>
+</html>

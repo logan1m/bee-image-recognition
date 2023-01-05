@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Bee Image Recognition</title>
+        <link rel="icon" type="image/x-icon" href="https://www.rspb.org.uk/globalassets/images/birds-and-wildlife/non-bird-species-illustrations/bumblebee_1200x675.jpg" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../static/style.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Bees</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#signup">Class</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <div class="text-center">
+                        <h1 class="mx-auto my-0 text-uppercase">Bees</h1>
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5">Enter image with bee to determine type of bee</h2>
+                        <!--     button added for uploading a photo    -->
+        <div class="mbr-buttons--left">
+            <div class="mbr-section-btn">
+                <a class="btn btn-primary btn-xl rounded-pill mt-5" href='#' id='seefood_button'>
+                    <form id='seefood_form' method=post enctype=multipart/form-data>
+                        <input id="seefood_input_field" name="file" type="file" onchange="this.form.submit();" hidden/>
+                    </form>
+                    Upload Bee Image Now!
+                </a>
+
+            </div>
+        </div>
+        <!--     javascript added for uploading a photo    -->
+    <script>
+        // added to get upload with a button working
+        document.getElementById('seefood_button').addEventListener('click', openDialog);
+
+        function openDialog() {
+            document.getElementById('seefood_input_field').click();
+        }
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#spinner").bind("ajaxSend", function() {
+                $(this).show();
+            }).bind("ajaxStop", function() {
+                $(this).hide();
+            }).bind("ajaxError", function() {
+                $(this).hide();
+            });
+            // seefood_input_field
+            $('#seefood_button').click(function() {
+
+            });
+
+        });
+    </script>
+
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- About-->
+        <section class="about-section text-center" id="about">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-white mb-4">Built with Neural Network Model</h2>
+                        <p class="text-white-50">
+                            Bee images are fed into a computer model. The model finds visual patterns in the images that consistently correlate with the particular bee labels. The model used 1000 images of each of the 3 bee types.<br><br>Click image to learn more about Neural Networks.
+                        </p>
+                    </div>
+                </div>
+                <a href="https://news.mit.edu/2017/explained-neural-networks-deep-learning-0414" target="_blank">
+                    <img class="img-fluid" src="https://www.researchgate.net/profile/Adem-Tekerek-2/publication/335903047/figure/fig1/AS:805611931443200@1569084260672/Proposed-artificial-neural-network-model-3-10-1-Neural-network-weight-vectors-are.png"  alt="..." />
+                </a>
+            </div>
+        </section>
+        <!-- Bee Types-->
+        <section class="projects-section bg-light" id="projects">
+            <div class="container px-4 px-lg-5">
+                    <!-- Honeybee-->
+                    <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                        <div class="col-xl-8 col-lg-7">
+                            <a href="https://en.wikipedia.org/wiki/Honey_bee" target="_blank">
+                                <img class="img-fluid mb-3 mb-lg-0" src="https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2013/02/honey_bee/12518879-1-eng-GB/Honey_bee_pillars.jpg" alt="..." />
+                            </a>
+                        </div>
+                        <div class="col-xl-4 col-lg-5">
+                            <div class="featured-text text-center text-lg-left">
+                                <h4>Honey Bee</h4>
+                                <p class="text-black-50 mb-0">Honey Bees are small and thin with a distict abdomen. They live in hives with tens of thousands of fellow bees. <br><br>Click image to learn more.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Bumblebee-->
+                    <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                        <div class="col-xl-8 col-lg-7">
+                            <a href="https://en.wikipedia.org/wiki/Bumble_bee" target="_blank">
+                                <img class="img-fluid mb-3 mb-lg-0" src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41576-020-00294-9/MediaObjects/41576_2020_294_Figa_HTML.jpg" alt="..." />
+                            </a>
+                            </div>
+                        <div class="col-xl-4 col-lg-5">
+                            <div class="featured-text text-center text-lg-left">
+                                <h4>Bumble Bee</h4>
+                                <p class="text-black-50 mb-0">Bumble Bees are round, fuzzy, and do not have a distict abdomen. They live in nests with up to a few hundred fellow bees. <br><br>Click image to learn more.</p>
+                            </div>
+                        </div>
+                    </div>
+                <!-- Carpenterbee-->
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-8 col-lg-7">
+                        <a href="https://en.wikipedia.org/wiki/Carpenter_bee" target="_blank">
+                            <img class="img-fluid mb-3 mb-lg-0" src="https://www.lawnstarter.com/blog/wp-content/uploads/2020/07/Eastern-Carpenter-Bee-Flickr.jpg" alt="..." />
+                        </a>
+                        </div>
+                        <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>Carpenter Bee</h4>
+                            <p class="text-black-50 mb-0">Carpenter Bees are large and hairless with shiny abdomens. They do not nest; instead they burrow in wood to lay their larva. <br><br>Click image to learn more.</p>
+                        </div>
+                    </div>
+            </div>
+        </section>
+        <!-- Class-->
+        <section class="signup-section" id="signup">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <h4 class="text-uppercase m-0">Haleigh Borich</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <h4 class="text-uppercase m-0">Hannah Cope</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <h4 class="text-uppercase m-0">Logan Morrill</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </body>
+</html>
