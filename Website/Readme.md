@@ -1,1 +1,1 @@
-Website located in path \Project\Website\omni\app\templates\index.html
+Website located in path \Website\omni\app\templates\index.html
